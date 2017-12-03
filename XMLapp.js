@@ -14,9 +14,9 @@ const jsonFile = fs.readFileSync('public/mastersheet.json','utf-8', (err, data)=
   //  console.log(JSON.parse(data).length)
 })
 
-function(){
-  var xmlData = new DOMParser().parseFromString(xmlFile);
-  var jsonData = JSON.parse(data);
-
-  console.log(jsonData)
+const readFiles = function(){
+  const xmlDocument =  new DOMParser().parseFromString(xmlFile);
+  const jsonDocument = JSON.parse(jsonFile).length;
+  console.log(jsonDocument, xmlDocument)
 }
+readFiles();
